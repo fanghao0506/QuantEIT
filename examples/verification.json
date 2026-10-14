@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-15",
+  "example_frame": 20,
+  "epochs": 1000,
+  "local_unit_tests_passed": 6,
+  "example_matches_archived_frame20_exactly": true,
+  "offline_viewer": {
+    "frame": 20,
+    "offline_external_requests": [],
+    "page_errors": [],
+    "mesh_traces": 2,
+    "sliders": 0,
+    "playback_controls": 0,
+    "camera_eye": {
+      "x": -0.4,
+      "y": 2.3,
+      "z": 0.8
+    }
+  },
+  "display_settings": {
+    "isosurface_threshold": 0.4,
+    "frame_count": 1,
+    "frame_ids": [
+      20
+    ],
+    "camera_eye": {
+      "x": -0.4,
+      "y": 2.3,
+      "z": 0.8
+    },
+    "normalization": "independent positive peak per frame",
+    "mip_uses_unthresholded_values": true,
+    "surface_virtual_zero_border": true,
+    "stored_reconstruction_unchanged": true
+  },
+  "tested_packages": {
+    "torch": "2.5.1+cu121",
+    "numpy": "2.3.1",
+    "scipy": "1.16.0",
+    "matplotlib": "3.9.2",
+    "scikit-image": "0.26.0",
+    "Pillow": "11.0.0",
+    "plotly": "6.3.0"
+  }
+}
