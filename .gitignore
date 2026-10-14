@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+results/
+*.pt
+*.pth
+*.zip
+# The small simulated inputs in data/ and verified examples/ are intentional.
+

@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "Please cite the QuantEIT article when using this demonstration."
+url: "https://github.com/fanghao0506/QuantEIT"
+title: "QuantEIT: Single-Frame 3D Lung Reconstruction Demo"
+type: software
+version: 0.1.0
+date-released: 2026-10-15
+license: MIT
+authors:
+  - family-names: Fang
+    given-names: Hao
+  - family-names: Teng
+    given-names: Sihao
+  - family-names: Yu
+    given-names: Hao
+  - family-names: Liu
+    given-names: Zhe
+  - family-names: Yuan
+    given-names: Siyi
+  - family-names: He
+    given-names: Huaiwu
+  - family-names: Yang
+    given-names: Yunjie
+preferred-citation:
+  type: article
+  title: "QuantEIT: Ultra-Lightweight Quantum-Inspired Inference for Electrical Impedance Tomography"
+  journal: IEEE Transactions on Industrial Informatics
+  year: 2026
+  doi: 10.1109/TII.2026.3731100
+  url: "https://ieeexplore.ieee.org/abstract/document/11718876"
+  start: 1
+  end: 12
+  authors:
+    - family-names: Fang
+      given-names: Hao
+    - family-names: Teng
+      given-names: Sihao
+    - family-names: Yu
+      given-names: Hao
+    - family-names: Liu
+      given-names: Zhe
+    - family-names: Yuan
+      given-names: Siyi
+    - family-names: He
+      given-names: Huaiwu
+    - family-names: Yang
+      given-names: Yunjie
+
