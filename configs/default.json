@@ -1,0 +1,11 @@
+{
+  "epochs": 1000,
+  "learning_rate": 0.12,
+  "laplace_weight": 0.001,
+  "tv_weight": 0.0022500000000000003,
+  "l1_weight": 0.0003333333333333333,
+  "n_circuits": 2,
+  "seed": 0,
+  "output_activation": "signed_sigmoid",
+  "deterministic_convolutions": true
+}
