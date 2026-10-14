@@ -1,7 +1,7 @@
 # QuantEIT：单帧 3D 肺重建 Demo
 
-本包只包含仿真肺的**第 20 帧**、对应的算子和几何信息，以及 QuantEIT
-重建与可视化代码。无需量子硬件或量子模拟器。
+本包提供仿真肺的**全部 20 帧电压和真值**、对应的算子和几何信息，以及 QuantEIT
+重建与可视化代码。默认 demo 仍只重建第 20 帧。无需量子硬件或量子模拟器。
 
 论文：[QuantEIT: Ultra-Lightweight Quantum-Inspired Inference for Electrical
 Impedance Tomography](https://ieeexplore.ieee.org/abstract/document/11718876)，
@@ -52,6 +52,27 @@ python -m unittest discover -s tests -v
 ```
 
 重复运行时请指定新的输出目录，程序不会覆盖已有重建。CPU 完整重建比 GPU 慢。
+
+## 使用全部 20 帧数据
+
+完整序列单独保存在 `data/measurements_20frames.npz` 和
+`data/ground_truth_20frames.npz`，帧编号为 1 到 20，电压与真值按同一顺序排列：
+
+```python
+import numpy as np
+
+with np.load("data/measurements_20frames.npz", allow_pickle=False) as data:
+    voltages = data["voltages"]          # float32，形状 (20, 328)
+    frame_ids = data["frame_ids"]        # 1, 2, ..., 20
+with np.load("data/ground_truth_20frames.npz", allow_pickle=False) as data:
+    references = data["conductivity_changes"]  # float32，形状 (20, 28153)
+    assert np.array_equal(frame_ids, data["frame_ids"])
+```
+
+全部帧共用仓库里的算子与几何映射。可以把 `voltages[i]` 传给
+`Reconstructor.reconstruct`，用 `dataset.to_volume(references[i])` 得到对应的
+三维真值。真值为仿真的电导率变化场，不是患者数据。
+数据格式和排列说明见 [data/README.md](data/README.md)。
 
 ## 接入自己的数据
 

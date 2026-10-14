@@ -2,7 +2,8 @@
 
 Run QuantEIT on one simulated 3D lung EIT sample: **frame 20** from the
 authors' lung simulation. The sensing operator, voltage measurement, geometry
-and reference field are included. No quantum hardware or simulator is needed.
+and reference field are included. The complete 20-frame voltage and reference
+sequence is also provided for independent use. No quantum hardware or simulator is needed.
 
 Paper: [QuantEIT: Ultra-Lightweight Quantum-Inspired Inference for Electrical
 Impedance Tomography](https://ieeexplore.ieee.org/abstract/document/11718876),
@@ -66,6 +67,28 @@ python -m unittest discover -s tests -v
 
 Existing reconstruction files are not overwritten. Use a fresh `--output`
 directory when running again. CPU execution takes longer than CUDA.
+
+## Use the complete 20-frame dataset
+
+The default demo still reconstructs only frame 20. The complete sequence is
+available separately in `data/measurements_20frames.npz` and
+`data/ground_truth_20frames.npz`, with frame IDs 1 through 20 in matching order:
+
+```python
+import numpy as np
+
+with np.load("data/measurements_20frames.npz", allow_pickle=False) as data:
+    voltages = data["voltages"]          # float32, shape (20, 328)
+    frame_ids = data["frame_ids"]        # 1, 2, ..., 20
+with np.load("data/ground_truth_20frames.npz", allow_pickle=False) as data:
+    references = data["conductivity_changes"]  # float32, shape (20, 28153)
+    assert np.array_equal(frame_ids, data["frame_ids"])
+```
+
+All frames use the included operator and geometry. Pass `voltages[i]` to
+`Reconstructor.reconstruct`; map `references[i]` to a 3D reference volume with
+`dataset.to_volume`. These are simulated conductivity-change fields, not
+patient recordings. See [data/README.md](data/README.md) for ordering and format.
 
 ## Use the reconstruction code
 

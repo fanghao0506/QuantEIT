@@ -1,6 +1,8 @@
 # Implementation notes
 
-The package includes one simulated lung sample with original frame ID 20.
+The default demo uses one simulated lung sample with original frame ID 20.
+The complete 20-frame voltage and reference sequence is also included separately
+for independent use, with the same operator, coordinate map and prepared normalization.
 The analytic circuit expectations, signed sigmoid output, Adam optimizer and
 MSE/TV/Laplacian/L1 objective follow the authors' archived 3D implementation.
 
