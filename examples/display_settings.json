@@ -1,0 +1,16 @@
+{
+  "isosurface_threshold": 0.4,
+  "frame_count": 1,
+  "frame_ids": [
+    20
+  ],
+  "camera_eye": {
+    "x": -0.4,
+    "y": 2.3,
+    "z": 0.8
+  },
+  "normalization": "independent positive peak per frame",
+  "mip_uses_unthresholded_values": true,
+  "surface_virtual_zero_border": true,
+  "stored_reconstruction_unchanged": true
+}
