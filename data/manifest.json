@@ -1,0 +1,52 @@
+{
+  "dataset": "Single simulated 3D lung EIT sample: original frame 20",
+  "origin": "Authors' archived Thorax_3D simulation inputs",
+  "frames": [
+    20
+  ],
+  "sensitivity_shape": [
+    328,
+    28153
+  ],
+  "voltages_shape": [
+    1,
+    328
+  ],
+  "grid_shape_zyx": [
+    32,
+    32,
+    40
+  ],
+  "preprocessing": "Original pre-normalized float32 operator and voltages; no additional normalization or sign flip",
+  "projection": "Coordinate-corrected, one-to-one FEM-to-volume mapping, exactly equivalent to archived CSR",
+  "projection_max_absolute_error": 0.0,
+  "data_license": "MIT; see ../LICENSE",
+  "source_files": {
+    "lung_DB_normalized_sensitivity.npy": "68e1e069ea85a500e033a8ac3e0f34ea378cedc690eab8a660005755294dae4c",
+    "CrossLayer_V_DBLung.txt": "7654e8002c7dd0659af997760515975aa72fa710e6d157697c330177aeea5a69",
+    "pos.txt": "9eba11bf23780297f2b6ae6a1b16b63f5b8f38d08214ccf52e75d87a49fcdaf7",
+    "true_cond_DBLung_frame20.txt": "cd3736c0c73f30bc842ead0c25775ce92d1765fc80108f2efddc308dca8dae12"
+  },
+  "files": {
+    "geometry.npz": {
+      "sha256": "f5e12c8e6eed1d4f7da4f55fcc38a80200170f1a257d27a4e70a70c473f8fc66",
+      "bytes": 155625
+    },
+    "ground_truth.npz": {
+      "sha256": "72c140dc8771e674acf2b2c9ba710025c5b2a7e1f9213c6fa0daf40bb7b99583",
+      "bytes": 2006
+    },
+    "measurements.npz": {
+      "sha256": "4ee3fcd2475691ddd754f820a4251771265eb2b3cc75bcf2c5cf6b8e7d7c41ad",
+      "bytes": 1626
+    },
+    "operator_01.npz": {
+      "sha256": "f5d00621824a2adf8deee8454770efc81df4898ca4899c91baf291fbd41b02e6",
+      "bytes": 17070372
+    },
+    "operator_02.npz": {
+      "sha256": "29d514e6e950b0d0743c02ec864c6475409673ead48205609ad545bd3117c119",
+      "bytes": 16997955
+    }
+  }
+}
