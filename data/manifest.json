@@ -1,5 +1,5 @@
 {
-  "dataset": "Single simulated 3D lung EIT sample: original frame 20",
+  "dataset": "Simulated 3D lung EIT: frame-20 demo and complete 20-frame sequence",
   "origin": "Authors' archived Thorax_3D simulation inputs",
   "frames": [
     20
@@ -47,6 +47,75 @@
     "operator_02.npz": {
       "sha256": "29d514e6e950b0d0743c02ec864c6475409673ead48205609ad545bd3117c119",
       "bytes": 16997955
+    },
+    "measurements_20frames.npz": {
+      "sha256": "aaa9928c3bc530d68307ff451d3e767b4500b330eb922a5612609ce948f34ec2",
+      "bytes": 24015
+    },
+    "ground_truth_20frames.npz": {
+      "sha256": "2b42331caeae2612553fb4776b3f533fb7ab52ddfa7c2aa2085b914bbe9fe4c8",
+      "bytes": 28544
+    }
+  },
+  "full_sequence": {
+    "frames": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "measurements_file": "measurements_20frames.npz",
+    "ground_truth_file": "ground_truth_20frames.npz",
+    "voltages_shape": [
+      20,
+      328
+    ],
+    "conductivity_changes_shape": [
+      20,
+      28153
+    ],
+    "row_order": "Row i corresponds to frame ID i + 1 in both arrays",
+    "operator_and_geometry": "Shared with the default frame-20 demo",
+    "source_files": {
+      "lung_DB_normalized_sensitivity.npy": "68e1e069ea85a500e033a8ac3e0f34ea378cedc690eab8a660005755294dae4c",
+      "CrossLayer_V_DBLung.txt": "7654e8002c7dd0659af997760515975aa72fa710e6d157697c330177aeea5a69",
+      "pos.txt": "9eba11bf23780297f2b6ae6a1b16b63f5b8f38d08214ccf52e75d87a49fcdaf7",
+      "true_cond_DBLung_frame1.txt": "5e4732d71fa60559bc028a3f10bd7920c0db66a179d369b72bc7c61124d359b0",
+      "true_cond_DBLung_frame2.txt": "c43b0f58932d2b058a2b7790fc2b9299a60db80249a1512d5f3879f49e9dd4a4",
+      "true_cond_DBLung_frame3.txt": "b99881adcc366b7d12a609c57413d875568ecba23c18397dc3ef5a18542d603a",
+      "true_cond_DBLung_frame4.txt": "76d340fbefa825eae82f72cecaf91b817d492682eb8ffcb529a7178b59191ad8",
+      "true_cond_DBLung_frame5.txt": "6860a7ce86a3c780b72a43ecf20373094db1be3bc9d782663df0407d970d9749",
+      "true_cond_DBLung_frame6.txt": "d0103c03853c13f74d9fc3f315622050e9abc8d1e8e167ab09b12210a1b29037",
+      "true_cond_DBLung_frame7.txt": "f064d23cbd45e275a9a36fa6198a161da28262bfae09cf8947cc0555c265649d",
+      "true_cond_DBLung_frame8.txt": "1c33b06a15c942227c429b6612baf2a2202575b92ce74a6200e60e4121fa3f53",
+      "true_cond_DBLung_frame9.txt": "de5a533ef46d656f78775a9fb1850fc8b0212d2e1180ae058917031cfe6a4b7b",
+      "true_cond_DBLung_frame10.txt": "25e7ce0ea730ce7b52efb89fff38391211a5297d440a7102c903e257768e5d6a",
+      "true_cond_DBLung_frame11.txt": "43bb6fc238453ba90bc0c436344a027fa7727a1699f0d8a90d16aae9b1adc4c5",
+      "true_cond_DBLung_frame12.txt": "cb39d50bb608d05e480c45090eb6b2297ca04c9a6e341b47645b927bec09ea20",
+      "true_cond_DBLung_frame13.txt": "a7d664071f5b6a4ccfe0b98ce31931dc8c000e47a3b9cb955053b0f10db192c2",
+      "true_cond_DBLung_frame14.txt": "144af600107a9fede2559320f40416d9db1b42f32d4583e85a248ac525fbb283",
+      "true_cond_DBLung_frame15.txt": "2d24e98580efccfc252ead9f45339c913a9455dd96d79d4be4db05f837e1f79d",
+      "true_cond_DBLung_frame16.txt": "2e40d8b9f479d38f1056484c8600fbf766eb83d16701fb305a0af95daa30b45a",
+      "true_cond_DBLung_frame17.txt": "377f1d8395857c3b1d56c09d41e415801f879d43a5daedd3b09ede0d4bf35662",
+      "true_cond_DBLung_frame18.txt": "723d6bef7586797971d85e30ab15a9efa7dccc26fb3ff96acb425083c7d11968",
+      "true_cond_DBLung_frame19.txt": "5399eae5b6e9792934fde1ba083287354c549d25d3ee3c9c41fb40e5510476b5",
+      "true_cond_DBLung_frame20.txt": "cd3736c0c73f30bc842ead0c25775ce92d1765fc80108f2efddc308dca8dae12"
     }
   }
 }
